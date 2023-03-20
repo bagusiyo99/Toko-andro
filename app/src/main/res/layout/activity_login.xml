@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/white"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="0dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/white"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="0dp"
+                 />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:text="Lupa kata sandi?"
+            android:textColor="@color/green" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_masuk"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:text="Masuk"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_13sdp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_15sdp">
+
+            <View
+                android:id="@+id/lineLeft"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/text1"
+                android:background="#D3D3D3" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:text="atau masuk dengan" />
+
+            <View
+                android:id="@+id/lineRight"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/text1"
+                android:background="#D3D3D3" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Button.OutlineBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:text="Google"
+            android:textAllCaps="false"
+            android:textColor="#AAAAAA"
+            android:textSize="@dimen/_13sdp"
+            app:icon="@drawable/google"
+            app:iconSize="@dimen/_19sdp"
+            app:iconTint="@null" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:text="Belum punya akun?" />
+
+            <TextView
+                android:id="@+id/btn_daftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daftar"
+                android:textColor="@color/green" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
